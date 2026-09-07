@@ -12,6 +12,7 @@ export function Header() {
 
   const navLinks = [
     { name: "Services", href: "/services" },
+    { name: "Areas Served", href: "/areas" },
     { name: "Projects", href: "/projects" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
@@ -36,13 +37,7 @@ export function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center space-x-8 text-xs font-bold uppercase tracking-[0.1em] text-slate-300">
-          {[
-            { name: "Services", href: "/services" },
-            { name: "Areas Served", href: "/areas-served" },
-            { name: "Projects", href: "/projects" },
-            { name: "About", href: "/about" },
-            { name: "Contact", href: "/contact" },
-          ].map((link) => (
+          {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
