@@ -16,16 +16,16 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <Comp
         ref={ref}
         className={cn(
-          "inline-flex items-center justify-center whitespace-nowrap text-sm font-semibold uppercase tracking-[0.1em] transition-all duration-500 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50",
+          "inline-flex items-center justify-center whitespace-nowrap text-xs md:text-sm font-bold uppercase tracking-[0.05em] transition-all duration-300 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 rounded-full cursor-pointer",
           {
-            "bg-primary text-primary-foreground hover:bg-secondary hover:text-white": variant === "default",
-            "bg-secondary text-secondary-foreground hover:bg-primary": variant === "secondary",
-            "border border-border bg-transparent hover:border-primary hover:bg-primary hover:text-white": variant === "outline",
-            "hover:text-secondary": variant === "ghost",
-            "text-primary underline-offset-8 hover:underline hover:text-secondary": variant === "link",
+            "bg-primary text-primary-foreground hover:bg-red-700 shadow-md hover:shadow-red-600/20 active:scale-[0.98]": variant === "default",
+            "bg-secondary text-secondary-foreground hover:bg-red-600 active:scale-[0.98]": variant === "secondary",
+            "border border-white/25 bg-transparent text-white hover:bg-white/10 hover:border-white": variant === "outline",
+            "hover:text-primary": variant === "ghost",
+            "text-primary underline-offset-8 hover:underline hover:text-red-500": variant === "link",
             "h-12 px-8 py-3": size === "default",
-            "h-10 px-6": size === "sm",
-            "h-16 px-12 text-base": size === "lg",
+            "h-10 px-6 text-xs": size === "sm",
+            "h-14 px-8 text-sm md:text-base": size === "lg",
             "h-12 w-12": size === "icon",
           },
           className

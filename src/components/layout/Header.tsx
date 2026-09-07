@@ -20,35 +20,61 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          {/* Placeholder for Logo, fallback to text */}
-          <span className="text-2xl font-bold tracking-tight text-primary">
-            {siteConfig.businessName !== "[BUSINESS NAME]" ? siteConfig.businessName : "GlazeCorp"}
-          </span>
+        <Link href="/" className="flex items-center space-x-3 group">
+          <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-black text-xl shadow-lg shadow-red-600/30 group-hover:scale-105 transition-transform">
+            DG
+          </div>
+          <div className="flex flex-col">
+            <span className="text-xl font-black tracking-tight text-white uppercase leading-none">
+              Dawelen<span className="text-primary">Glass</span>
+            </span>
+            <span className="text-[10px] font-semibold tracking-widest text-slate-400 uppercase mt-0.5">
+              Glazing & Repairs
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center space-x-10 text-[11px] font-bold uppercase tracking-[0.2em] text-foreground">
-          {navLinks.map((link) => (
+        <nav className="hidden lg:flex items-center space-x-8 text-xs font-bold uppercase tracking-[0.1em] text-slate-300">
+          {[
+            { name: "Services", href: "/services" },
+            { name: "Areas Served", href: "/areas-served" },
+            { name: "Projects", href: "/projects" },
+            { name: "About", href: "/about" },
+            { name: "Contact", href: "/contact" },
+          ].map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="transition-colors hover:text-secondary relative group"
+              className="transition-colors hover:text-white relative py-2 group flex items-center gap-1.5"
             >
-              {link.name}
-              <span className="absolute -bottom-2 left-0 w-full h-[1px] bg-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+              <span>{link.name}</span>
+              <span className="absolute bottom-0 left-0 w-full h-[2px] bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
             </Link>
           ))}
         </nav>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:flex items-center space-x-8">
-          <Link href={`tel:${siteConfig.phone}`} className="flex items-center text-[11px] font-bold uppercase tracking-[0.1em] hover:text-secondary transition-colors text-foreground">
-            <Phone className="mr-2 h-4 w-4 text-muted-foreground" />
-            {siteConfig.phone}
-          </Link>
-          <Button asChild size="sm" className="h-10 px-6 text-[10px]">
-            <Link href="/request-a-quote">GET A QUOTE</Link>
+        {/* Desktop CTA matching Dribbble On Top Roofing */}
+        <div className="hidden md:flex items-center space-x-5">
+          <a
+            href={`tel:${siteConfig.phone}`}
+            className="flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-full transition-all group"
+          >
+            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white shadow-sm group-hover:scale-110 transition-transform">
+              <Phone className="h-4 w-4" />
+            </div>
+            <div className="flex flex-col text-left">
+              <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400">
+                Fast Call Out
+              </span>
+              <span className="text-xs font-black tracking-wide text-white">
+                {siteConfig.phone}
+              </span>
+            </div>
+          </a>
+
+          <Button asChild size="sm" className="bg-primary hover:bg-red-700 text-white font-bold text-xs px-6 py-2.5 rounded-full shadow-lg shadow-red-600/30">
+            <Link href="/request-a-quote">FREE ESTIMATE</Link>
           </Button>
         </div>
 

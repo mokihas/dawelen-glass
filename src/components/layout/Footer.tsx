@@ -27,27 +27,38 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-foreground text-muted py-16 border-t border-border">
+    <footer className="bg-[#0B0D10] text-slate-400 py-16 border-t border-slate-800/80">
       <div className="container grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5 mb-16">
         
-        {/* Column 1: Brand & GBP Info */}
+        {/* Column 1: Brand & Identity */}
         <div className="lg:col-span-2 space-y-6">
-          <span className="text-2xl font-bold tracking-[0.1em] uppercase text-white">
-            {siteConfig.businessName !== "[BUSINESS NAME]" ? siteConfig.businessName : "GlazeCorp"}
-          </span>
-          <p className="text-sm text-gray-400 max-w-sm leading-relaxed">
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-black text-xl shadow-lg shadow-red-600/30">
+              DG
+            </div>
+            <div className="flex flex-col">
+              <span className="text-xl font-black tracking-tight text-white uppercase leading-none">
+                Dawelen<span className="text-primary">Glass</span>
+              </span>
+              <span className="text-[10px] font-semibold tracking-widest text-slate-400 uppercase mt-0.5">
+                Glazing & Glass Repairs
+              </span>
+            </div>
+          </Link>
+
+          <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
             {siteConfig.description}
           </p>
           
-          {/* Social Media Icons (Dynamic from Config) */}
-          <div className="flex items-center gap-4 pt-4">
+          {/* Social Media Icons with red hover */}
+          <div className="flex items-center gap-3 pt-2">
             {siteConfig.socialProfiles.map((profile, i) => (
                <a 
                  key={i}
                  href={profile.url}
                  target="_blank"
                  rel="noopener noreferrer"
-                 className="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-secondary hover:bg-secondary/10 transition-all duration-300"
+                 className="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary hover:bg-primary transition-all duration-300 shadow-sm"
                  aria-label={profile.platform}
                >
                  {getSocialIcon(profile.platform)}
@@ -57,58 +68,73 @@ export function Footer() {
 
           {/* Trust Badges */}
           {siteConfig.trustBadges && siteConfig.trustBadges.length > 0 && (
-            <div className="flex flex-wrap items-center gap-4 pt-6 border-t border-gray-800/50">
+            <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-800/50">
               {siteConfig.trustBadges.map((badge, i) => (
                 <div key={i} className="flex items-center gap-2">
-                  <img src={badge.image} alt={badge.name} className="h-10 object-contain grayscale hover:grayscale-0 transition-all" />
+                  <img src={badge.image} alt={badge.name} className="h-9 object-contain grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100" />
                 </div>
               ))}
             </div>
           )}
         </div>
 
-        {/* Column 2: Navigation */}
+        {/* Column 2: Quick Links */}
         <div className="space-y-6">
-          <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-secondary">Company</h3>
-          <ul className="space-y-4 text-sm font-medium text-gray-400">
-            <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-            <li><Link href="/services" className="hover:text-white transition-colors">Our Services</Link></li>
-            <li><Link href="/projects" className="hover:text-white transition-colors">Portfolio</Link></li>
-            <li><Link href="/faqs" className="hover:text-white transition-colors">FAQs</Link></li>
-            <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+          <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-white border-l-2 border-primary pl-3">
+            Quick Links
+          </h3>
+          <ul className="space-y-3 text-sm font-medium text-slate-400">
+            <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
+            <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+            <li><Link href="/services" className="hover:text-primary transition-colors">All Services</Link></li>
+            <li><Link href="/projects" className="hover:text-primary transition-colors">Completed Work</Link></li>
+            <li><Link href="/faqs" className="hover:text-primary transition-colors">FAQs</Link></li>
+            <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
           </ul>
         </div>
 
-        {/* Column 3: Areas We Serve */}
+        {/* Column 3: Services */}
         <div className="space-y-6">
-          <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-secondary">Service Areas</h3>
-          <ul className="space-y-4 text-sm font-medium text-gray-400">
-            {siteConfig.serviceAreas.map((area) => (
-              <li key={area.slug}>
-                <Link href={`/areas/${area.slug}`} className="hover:text-white transition-colors">
-                  {area.name}
+          <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-white border-l-2 border-primary pl-3">
+            Services
+          </h3>
+          <ul className="space-y-3 text-sm font-medium text-slate-400">
+            {siteConfig.services.slice(0, 5).map((service) => (
+              <li key={service.id}>
+                <Link href={`/services/${service.slug}`} className="hover:text-primary transition-colors">
+                  {service.name}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Column 4: Contact */}
+        {/* Column 4: Contact Us */}
         <div className="space-y-6">
-          <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-secondary">Contact</h3>
-          <ul className="space-y-4 text-sm font-medium text-gray-400">
+          <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-white border-l-2 border-primary pl-3">
+            Contact Us
+          </h3>
+          <ul className="space-y-4 text-sm font-medium text-slate-400">
             <li>
-              <a href={`tel:${siteConfig.phone}`} className="hover:text-white transition-colors flex items-center gap-3">
-                 <Phone className="w-4 h-4 text-gray-600" /> {siteConfig.phone}
+              <a href={`tel:${siteConfig.phone}`} className="hover:text-white transition-colors flex items-center gap-3 group">
+                 <div className="w-8 h-8 rounded-full bg-primary/10 group-hover:bg-primary flex items-center justify-center text-primary group-hover:text-white transition-colors shrink-0">
+                   <Phone className="w-4 h-4" />
+                 </div>
+                 <span>{siteConfig.phone}</span>
               </a>
             </li>
             <li>
-              <a href={`mailto:${siteConfig.email}`} className="hover:text-white transition-colors flex items-center gap-3">
-                 <Mail className="w-4 h-4 text-gray-600" /> {siteConfig.email}
+              <a href={`mailto:${siteConfig.email}`} className="hover:text-white transition-colors flex items-center gap-3 group">
+                 <div className="w-8 h-8 rounded-full bg-primary/10 group-hover:bg-primary flex items-center justify-center text-primary group-hover:text-white transition-colors shrink-0">
+                   <Mail className="w-4 h-4" />
+                 </div>
+                 <span className="truncate">{siteConfig.email}</span>
               </a>
             </li>
-            <li className="flex items-start gap-3 text-gray-400">
-               <MapPin className="w-4 h-4 text-gray-600 shrink-0 mt-0.5" />
+            <li className="flex items-start gap-3 text-slate-400">
+               <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0 mt-0.5">
+                 <MapPin className="w-4 h-4" />
+               </div>
                <span>
                  {siteConfig.streetAddress}<br />
                  {siteConfig.city}, {siteConfig.state} {siteConfig.postalCode}
@@ -120,22 +146,18 @@ export function Footer() {
       </div>
 
       {/* GBP Verification / Legal Footer */}
-      <div className="container pt-8 border-t border-gray-900 flex flex-col md:flex-row items-start md:items-center justify-between text-[11px] text-gray-600 uppercase tracking-widest gap-6">
-        
-        <div className="flex flex-col space-y-2">
+      <div className="container pt-8 border-t border-slate-900 flex flex-col md:flex-row items-start md:items-center justify-between text-xs text-slate-500 gap-6">
+        <div className="flex flex-col space-y-1">
            <p>&copy; {currentYear} {siteConfig.legalBusinessName}. All rights reserved.</p>
-           {/* Essential info for GBP / Trust verification */}
-           <p className="text-gray-500">
-             Registered Address: {siteConfig.streetAddress}, {siteConfig.city}, {siteConfig.state} {siteConfig.postalCode} 
-             {siteConfig.companyRegistrationNumber && siteConfig.companyRegistrationNumber !== "CRN_PLACEHOLDER" && ` | Registration No: ${siteConfig.companyRegistrationNumber}`}
+           <p className="text-slate-600 text-[11px]">
+             Registered in Anglesey & North Wales • {siteConfig.streetAddress}, {siteConfig.city}, {siteConfig.postalCode}
            </p>
         </div>
         
-        <div className="flex space-x-6">
-          <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
-          <Link href="/terms-and-conditions" className="hover:text-gray-300 transition-colors">Terms & Conditions</Link>
+        <div className="flex space-x-6 text-xs">
+          <Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+          <Link href="/terms-and-conditions" className="hover:text-primary transition-colors">Terms & Conditions</Link>
         </div>
-
       </div>
     </footer>
   )
