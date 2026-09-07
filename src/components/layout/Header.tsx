@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Phone, Menu, X, MessageCircle } from "lucide-react"
+import { Phone, Menu, X, MessageCircle, ChevronDown } from "lucide-react"
 import { siteConfig } from "@/config/siteConfig"
 import { Button } from "@/components/ui/Button"
 import { cn } from "@/lib/utils"
@@ -38,14 +38,32 @@ export function Header() {
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center space-x-8 text-xs font-bold uppercase tracking-[0.1em] text-slate-300">
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="transition-colors hover:text-white relative py-2 group flex items-center gap-1.5"
-            >
-              <span>{link.name}</span>
-              <span className="absolute bottom-0 left-0 w-full h-[2px] bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-            </Link>
+            <div key={link.name} className="relative group py-6">
+              <Link
+                href={link.href}
+                className="transition-colors hover:text-white flex items-center gap-1.5 relative"
+              >
+                <span>{link.name}</span>
+                {link.name === "Services" && <ChevronDown className="h-3 w-3" />}
+                <span className="absolute -bottom-2 left-0 w-full h-[2px] bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+              </Link>
+              
+              {link.name === "Services" && (
+                <div className="absolute top-full left-0 w-64 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top -translate-y-2 group-hover:translate-y-0 overflow-hidden z-50">
+                  <div className="p-2 flex flex-col">
+                    {siteConfig.services.map((service) => (
+                      <Link 
+                        key={service.slug}
+                        href={`/services/${service.slug}`}
+                        className="px-4 py-3 text-slate-600 hover:text-primary hover:bg-slate-50 text-[11px] font-bold uppercase tracking-wider rounded-lg transition-colors"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
         </nav>
 

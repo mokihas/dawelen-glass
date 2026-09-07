@@ -78,19 +78,19 @@ export function Footer() {
           )}
         </div>
 
-        {/* Column 2: Quick Links */}
+        {/* Column 2: Service Areas */}
         <div className="space-y-6">
           <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-white border-l-2 border-primary pl-3">
-            Quick Links
+            Service Areas
           </h3>
           <ul className="space-y-3 text-sm font-medium text-slate-400">
-            <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
-            <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-            <li><Link href="/services" className="hover:text-primary transition-colors">All Services</Link></li>
-            <li><Link href="/areas" className="hover:text-primary transition-colors">Areas Served</Link></li>
-            <li><Link href="/projects" className="hover:text-primary transition-colors">Completed Work</Link></li>
-            <li><Link href="/faqs" className="hover:text-primary transition-colors">FAQs</Link></li>
-            <li><Link href="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
+            {siteConfig.serviceAreas.slice(0, 9).map((area) => (
+              <li key={area.slug}>
+                <Link href={`/areas/${area.slug}`} className="hover:text-primary transition-colors">
+                  {area.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -100,7 +100,7 @@ export function Footer() {
             Services
           </h3>
           <ul className="space-y-3 text-sm font-medium text-slate-400">
-            {siteConfig.services.slice(0, 5).map((service) => (
+            {siteConfig.services.slice(0, 8).map((service) => (
               <li key={service.id}>
                 <Link href={`/services/${service.slug}`} className="hover:text-primary transition-colors">
                   {service.name}
