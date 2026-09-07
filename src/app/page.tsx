@@ -54,11 +54,11 @@ export default function Home() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white leading-[1.03]">
-                STAY PROTECTED WITH <span className="text-primary">ANGLESEY&apos;S</span> GLAZING EXPERTS
+                RELIABLE GLASS REPLACEMENT AND GLAZING SERVICES IN BENLLECH
               </h1>
 
               <p className="text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-xl">
-                Emergency board-up, double glazing replacement, window repairs & bespoke glass installations across Benllech, Anglesey, and North Wales. Quality craft built to last.
+                Dawelen Glass helps homeowners and local businesses with misted double glazed unit replacement, glass repairs, bespoke glass cutting, mirrors, shopfront glazing, and other practical glazing solutions across Anglesey.
               </p>
 
               {/* Action Buttons */}
@@ -220,11 +220,11 @@ export default function Home() {
           </span>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-slate-900 mb-6 leading-tight">
-            YOUR TRUSTED LOCAL GLAZING TEAM FOCUSED ON QUALITY, DURABILITY &amp; CUSTOMER CARE
+            LOCAL GLAZING HELP WITH A PRACTICAL APPROACH
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-10 max-w-3xl mx-auto font-normal">
-            Based in Benllech, Dawelen Glass is your #1 choice for bespoke architectural glazing, emergency glass repairs, window replacements, and custom mirrors across Anglesey and Gwynedd. Our certified team of experienced specialists delivers precision, long-lasting durability, and unmatched customer care on every installation.
+            Dawelen Glass provides glass repair and replacement services for customers who want a straightforward, dependable solution for damaged, misted, or outdated glazing. From failed double glazed units to custom glass work, the focus is on restoring clarity, improving function, and helping your property look well cared for.
           </p>
 
           {/* 3 Pillars */}
@@ -233,24 +233,24 @@ export default function Home() {
               <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold mb-4">
                 <ShieldCheck className="w-5 h-5" />
               </div>
-              <h4 className="font-bold text-slate-900 mb-1">Guaranteed Work</h4>
-              <p className="text-xs text-slate-600 leading-relaxed">All installations comply with British Standards and insurance guidelines.</p>
+              <h4 className="font-bold text-slate-900 mb-1">Clear Advice</h4>
+              <p className="text-xs text-slate-600 leading-relaxed">We explain the likely cause of the issue and the best next step so you can make an informed decision.</p>
             </div>
 
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
               <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold mb-4">
                 <Clock className="w-5 h-5" />
               </div>
-              <h4 className="font-bold text-slate-900 mb-1">Rapid Call Out</h4>
-              <p className="text-xs text-slate-600 leading-relaxed">Fast local response for broken window boarding and glass replacement.</p>
+              <h4 className="font-bold text-slate-900 mb-1">Careful Workmanship</h4>
+              <p className="text-xs text-slate-600 leading-relaxed">Every repair or replacement is handled with attention to fit, finish, and everyday practicality.</p>
             </div>
 
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
               <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold mb-4">
                 <Award className="w-5 h-5" />
               </div>
-              <h4 className="font-bold text-slate-900 mb-1">Over 20 Years Exp</h4>
-              <p className="text-xs text-slate-600 leading-relaxed">Trusted by residential homeowners and leading commercial enterprises.</p>
+              <h4 className="font-bold text-slate-900 mb-1">Straightforward Service</h4>
+              <p className="text-xs text-slate-600 leading-relaxed">We keep communication clear from first contact through to completion, making the job easy to manage.</p>
             </div>
           </div>
 
@@ -365,11 +365,11 @@ export default function Home() {
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-xs font-black uppercase tracking-[0.2em] text-primary block mb-2">
-              Our Capabilities
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-slate-900 mb-4">
-              PREMIER GLAZING SERVICES
-            </h2>
+            OUR SERVICES
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-slate-900 mb-4">
+            GLASS AND GLAZING SERVICES
+          </h2>
             <p className="text-slate-600 text-base">
               We&apos;re proud to serve the Benllech, Anglesey, and North Wales communities with excellence.
             </p>
@@ -596,13 +596,13 @@ export default function Home() {
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-xs font-black uppercase tracking-[0.2em] text-primary block mb-2">
-              Areas We Cover
+              SERVICE AREAS
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-slate-900 mb-4">
-              GLAZING SOLUTIONS NEAR YOU
+              PROUDLY SERVING BENLLECH AND NEARBY ANGLESEY COMMUNITIES
             </h2>
             <p className="text-slate-600 text-base">
-              Providing reliable glazing and glass repair services for homeowners and businesses throughout Anglesey and North Wales.
+              Dawelen Glass serves Benllech and surrounding Anglesey communities with glass repairs, glazing, mirror installation, bespoke glass cutting, and double glazed unit replacement for homes and businesses.
             </p>
           </div>
 
@@ -695,11 +695,11 @@ export default function Home() {
           </div>
 
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-white leading-tight">
-            NEED RELIABLE GLAZING IN <span className="text-primary">ANGLESEY</span>?
+            SPEAK WITH A LOCAL GLAZING SPECIALIST
           </h2>
 
           <p className="text-base sm:text-lg text-slate-300 max-w-xl mx-auto">
-            Get your transparent, zero-obligation estimate today or call our rapid response team directly.
+            Share the details of your glass or glazing issue and we will help you find the right solution, whether you need a replacement unit, repair, or a custom cut piece of glass for your property.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
