@@ -12,11 +12,11 @@ export default function ServicesPage() {
       <section className="bg-muted py-16 md:py-24">
         <div className="container">
           <div className="max-w-3xl space-y-4">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
-              Our Services
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground uppercase">
+              Glass And Glazing Services
             </h1>
             <p className="text-xl text-muted-foreground">
-              Comprehensive glass repair, replacement, and installation services tailored to your specific requirements.
+              Dawelen Glass helps homeowners and local businesses with misted double glazed unit replacement, glass repairs, bespoke glass cutting, mirrors, shopfront glazing, and other practical glazing solutions.
             </p>
           </div>
         </div>

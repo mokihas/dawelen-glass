@@ -13,11 +13,11 @@ export default function AreasPage() {
       <section className="bg-muted py-16 md:py-24">
         <div className="container">
           <div className="max-w-3xl space-y-4">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
-              Areas We Serve
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground uppercase">
+              Proudly Serving Benllech And Nearby Anglesey Communities
             </h1>
             <p className="text-xl text-muted-foreground">
-              We provide professional glass replacement and glazing services across {siteConfig.city} and surrounding regions.
+              Dawelen Glass serves Benllech and surrounding Anglesey communities with glass repairs, glazing, mirror installation, bespoke glass cutting, and double glazed unit replacement for homes and businesses.
             </p>
           </div>
         </div>

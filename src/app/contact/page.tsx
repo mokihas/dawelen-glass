@@ -13,11 +13,11 @@ export default function ContactPage() {
       <section className="bg-muted py-16 md:py-24">
         <div className="container">
           <div className="max-w-3xl space-y-4">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
-              Contact Us
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground uppercase">
+              Speak With A Local Glazing Specialist
             </h1>
             <p className="text-xl text-muted-foreground">
-              We're here to help with your glass and glazing requirements. Reach out to our team today.
+              Share the details of your glass or glazing issue and we will help you find the right solution, whether you need a replacement unit, repair, or a custom cut piece of glass for your property.
             </p>
           </div>
         </div>
