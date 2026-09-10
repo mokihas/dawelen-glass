@@ -3,9 +3,9 @@
 :root {
   --background: #0F1216;
   --foreground: #ffffff; 
-  --primary: #DC2626; /* Contractor Bold Red */
+  --primary: #2b81d6; /* Dawelen Blue */
   --primary-foreground: #ffffff;
-  --secondary: #E53935; /* Bright Accent Red */
+  --secondary: #5ba5eb; /* Light Blue Accent */
   --secondary-foreground: #ffffff;
   --muted: #181E27;
   --muted-foreground: #94A3B8; 

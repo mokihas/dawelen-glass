@@ -22,7 +22,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center space-x-3 group">
-          <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-black text-xl shadow-lg shadow-red-600/30 group-hover:scale-105 transition-transform">
+          <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-black text-xl shadow-lg shadow-blue-600/30 group-hover:scale-105 transition-transform">
             DG
           </div>
           <div className="flex flex-col">
@@ -86,7 +86,7 @@ export function Header() {
             </div>
           </a>
 
-          <Button asChild size="sm" className="bg-primary hover:bg-red-700 text-white font-bold text-xs px-6 py-2.5 rounded-full shadow-lg shadow-red-600/30">
+          <Button asChild size="sm" className="bg-primary hover:bg-blue-700 text-white font-bold text-xs px-6 py-2.5 rounded-full shadow-lg shadow-blue-600/30">
             <Link href="/request-a-quote">FREE ESTIMATE</Link>
           </Button>
         </div>

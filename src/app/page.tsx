@@ -63,7 +63,7 @@ export default function Home() {
 
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center gap-4 pt-2">
-                <Button asChild size="lg" className="bg-primary hover:bg-red-700 text-white font-bold px-8 py-4 rounded-full shadow-xl shadow-red-600/30">
+                <Button asChild size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-full shadow-xl shadow-blue-600/30">
                   <Link href="/request-a-quote" className="flex items-center gap-2">
                     <span>GET A FREE ESTIMATE</span>
                     <ArrowRight className="h-5 w-5" />
@@ -183,7 +183,7 @@ export default function Home() {
                     {/* Submit Button */}
                     <Button 
                       type="submit" 
-                      className="w-full bg-primary hover:bg-red-700 text-white font-black text-sm py-4 rounded-xl shadow-lg shadow-red-600/30 flex items-center justify-center gap-2 uppercase tracking-wider mt-2"
+                      className="w-full bg-primary hover:bg-blue-700 text-white font-black text-sm py-4 rounded-xl shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2 uppercase tracking-wider mt-2"
                     >
                       <span>REQUEST A FREE ESTIMATE</span>
                       <ArrowRight className="h-4 w-4" />
@@ -254,7 +254,7 @@ export default function Home() {
             </div>
           </div>
 
-          <Button asChild size="lg" className="bg-primary hover:bg-red-700 text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-red-600/30">
+          <Button asChild size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-blue-600/30">
             <Link href="/about" className="flex items-center gap-2">
               <span>LEARN MORE ABOUT US</span>
               <ArrowRight className="h-5 w-5" />
@@ -297,7 +297,7 @@ export default function Home() {
                     className="w-full bg-transparent text-sm text-white placeholder:text-slate-400 focus:outline-none"
                   />
                 </div>
-                <Button asChild className="w-full sm:w-auto bg-primary hover:bg-red-700 text-white font-bold px-8 py-3.5 rounded-xl uppercase tracking-wider shrink-0">
+                <Button asChild className="w-full sm:w-auto bg-primary hover:bg-blue-700 text-white font-bold px-8 py-3.5 rounded-xl uppercase tracking-wider shrink-0">
                   <Link href="/request-a-quote">
                     START <ChevronRight className="h-4 w-4 ml-1 inline" />
                   </Link>
@@ -338,7 +338,7 @@ export default function Home() {
               },
             ].map((item) => (
               <div key={item.step} className="bg-[#F8FAFC] rounded-2xl p-6 border border-slate-200 text-center flex flex-col items-center group hover:shadow-md transition-shadow">
-                <div className="w-10 h-10 rounded-full bg-primary text-white font-black text-sm flex items-center justify-center mb-4 shadow-md shadow-red-600/20 group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 rounded-full bg-primary text-white font-black text-sm flex items-center justify-center mb-4 shadow-md shadow-blue-600/20 group-hover:scale-110 transition-transform">
                   {item.step}
                 </div>
                 <h4 className="font-bold text-slate-900 mb-2">{item.title}</h4>
@@ -389,7 +389,7 @@ export default function Home() {
           </div>
 
           <div className="mt-16 text-center">
-            <Button asChild size="lg" className="bg-primary hover:bg-red-700 text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-red-600/30">
+            <Button asChild size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-blue-600/30">
               <Link href="/services" className="flex items-center gap-2">
                 <span>VIEW ALL SERVICES</span>
                 <ArrowRight className="h-5 w-5" />
@@ -437,7 +437,7 @@ export default function Home() {
               const Icon = item.icon
               return (
                 <div key={idx} className="flex flex-col items-center text-center space-y-4 group">
-                  <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-white shadow-xl shadow-red-600/30 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-white shadow-xl shadow-blue-600/30 group-hover:scale-110 transition-transform duration-300">
                     <Icon className="w-10 h-10" />
                   </div>
                   <h3 className="text-sm md:text-base font-black uppercase tracking-wider text-white">
@@ -534,7 +534,7 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-            <Button asChild size="lg" className="bg-primary hover:bg-red-700 text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-red-600/30">
+            <Button asChild size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-blue-600/30">
               <a href={siteConfig.reviews?.googleBusinessProfileUrl || "#"} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                 <span>VIEW MORE TESTIMONIALS</span>
                 <ArrowRight className="h-5 w-5" />
@@ -570,7 +570,7 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-            <Button asChild size="lg" className="bg-primary hover:bg-red-700 text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-red-600/30">
+            <Button asChild size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-blue-600/30">
               <Link href="/projects" className="flex items-center gap-2">
                 <span>VIEW ALL PROJECTS</span>
                 <ArrowRight className="h-5 w-5" />
@@ -703,7 +703,7 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button asChild size="lg" className="w-full sm:w-auto bg-primary hover:bg-red-700 text-white font-black px-10 py-5 rounded-full shadow-2xl shadow-red-600/40 uppercase tracking-wider">
+            <Button asChild size="lg" className="w-full sm:w-auto bg-primary hover:bg-blue-700 text-white font-black px-10 py-5 rounded-full shadow-2xl shadow-blue-600/40 uppercase tracking-wider">
               <Link href="/request-a-quote">REQUEST A FREE QUOTE</Link>
             </Button>
 

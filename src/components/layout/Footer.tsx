@@ -33,7 +33,7 @@ export function Footer() {
         {/* Column 1: Brand & Identity */}
         <div className="lg:col-span-2 space-y-6">
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-black text-xl shadow-lg shadow-red-600/30">
+            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-black text-xl shadow-lg shadow-blue-600/30">
               DG
             </div>
             <div className="flex flex-col">

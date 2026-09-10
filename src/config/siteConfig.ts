@@ -35,7 +35,7 @@ export const siteConfig = {
     { name: "Pentraeth", slug: "pentraeth" },
     { name: "Holyhead", slug: "holyhead" }
   ],
-  logo: "/logo.png",
+  logo: "/logo.jpg",
   favicon: "/favicon.ico",
   heroImage: "https://vibe.filesafe.space/1780479504797776542/assets/a7c7a44b-7ea3-4136-9187-f810dc869652.png",
   aboutImage: "https://vibe.filesafe.space/1780479504797776542/assets/3851b8f6-00b2-49e1-aae1-903a37903f88.png",
